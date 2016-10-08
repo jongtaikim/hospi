@@ -87,10 +87,35 @@ class page extends CI_Controller {
 		}
 
 
-		   $sql = "SELECT *  FROM `product_data`  where idx in (13,14,15,1,2,17,18,19)  order by 순서 asc";
-           $row = $this->db-> sqlFetchAll($sql);
+           $this->config->load('product_menu');
+           $rows = $this->config->item('menu');
 
-           $tpl->assign('main_LIST',$row);
+     /*      $sql = "SELECT idx  FROM `product_data`  where idx in (13,14,15,1,2,17,18,19)  order by 순서 asc";
+           $row = $this->db-> sqlFetchAll($sql);
+           print_r($row);
+           for($ii=0; $ii<count($row); $ii++) {
+               echo $row[$ii][idx].",";
+           }
+           echo 111;
+           exit;*/
+		   $row = array(1,2,15,13,14,17,18,19);
+
+           $ia = 0;
+           for($ii=0; $ii<count($row); $ii++) {
+               for($i=0; $i<count($rows); $i++) {
+                    for($ib=0; $ib<count($rows[$i]['sub']); $ib++) {
+                        if($row[$ii] == $rows[$i]['sub'][$ib]['idx']){
+                            $row2[$ia] = $rows[$i]['sub'][$ib];
+                            $ia++;
+                        }
+                    }
+
+               }
+
+           }
+
+
+           $tpl->assign('main_LIST',$row2);
 
 
 		$tpl->setLayout('@main');

@@ -159,7 +159,7 @@ class product extends CI_Controller {
         $row = $this->db-> sqlFetchAll($sql);
 
         for($ii=0; $ii<count($row); $ii++) {
-            $sql = "SELECT idx, 카테고리 , 상품명 ,상품명1 ,상품명2  FROM `product_data` where 카테고리 = '".$row[$ii]['카테고리']."' order by idx asc;";
+            $sql = "SELECT * FROM `product_data` where 카테고리 = '".$row[$ii]['카테고리']."' order by idx asc;";
 
             $row[$ii]['sub'] = $this->db-> sqlFetchAll($sql);
 
@@ -176,10 +176,11 @@ class product extends CI_Controller {
         	echo '$config[\'menu\']['.$ii.'][\'카테고리\']="'.$row[$ii]['카테고리'].'"; <br>';
             for($i=0; $i<count($row[$ii]['sub']); $i++) {
                 echo '$config[\'menu\']['.$ii.'][\'sub\']['.$i.'][\'idx\']="'.$row[$ii]['sub'][$i]['idx'].'"; <br>';
-                echo '$config[\'menu\']['.$ii.'][\'sub\']['.$i.'][\'카테고리\']="'.$row[$ii]['sub'][$i]['카테고리'].'"; <br>';
-                echo '$config[\'menu\']['.$ii.'][\'sub\']['.$i.'][\'상품명\']="'.$row[$ii]['sub'][$i]['상품명'].'"; <br>';
-                echo '$config[\'menu\']['.$ii.'][\'sub\']['.$i.'][\'상품명2\']="'.$row[$ii]['sub'][$i]['상품명2'].'"; <br>';
-                echo '$config[\'menu\']['.$ii.'][\'sub\']['.$i.'][\'상품명3\']="'.$row[$ii]['sub'][$i]['상품명3'].'"; <br>';
+                echo '  $config[\'menu\']['.$ii.'][\'sub\']['.$i.'][\'카테고리\']="'.$row[$ii]['sub'][$i]['카테고리'].'"; <br>';
+                echo '  $config[\'menu\']['.$ii.'][\'sub\']['.$i.'][\'상품명\']="'.$row[$ii]['sub'][$i]['상품명'].'"; <br>';
+                echo '  $config[\'menu\']['.$ii.'][\'sub\']['.$i.'][\'상품명2\']="'.$row[$ii]['sub'][$i]['상품명2'].'"; <br>';
+                echo '  $config[\'menu\']['.$ii.'][\'sub\']['.$i.'][\'상품명3\']="'.$row[$ii]['sub'][$i]['상품명3'].'"; <br>';
+                echo '  $config[\'menu\']['.$ii.'][\'sub\']['.$i.'][\'상품설명\']="'.$row[$ii]['sub'][$i]['상품설명'].'"; <br><br><br>';
             }
         }
 
