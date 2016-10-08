@@ -1,2 +1,0 @@
-<?php /* Template_ 2.2.3 2016/09/07 22:42:47 D:\web\hospi\application\cache\dynamic\D_\web\hospi\application\views\admin\popup.htm\b290e1ac2e22cc7ab93f9c55c6da7865 */?>
-<?php echo $TPL_VAR["contents"]?>

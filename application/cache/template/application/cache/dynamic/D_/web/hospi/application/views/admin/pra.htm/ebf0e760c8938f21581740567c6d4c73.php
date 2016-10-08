@@ -1,2 +1,0 @@
-<?php /* Template_ 2.2.3 2016/09/07 22:42:37 D:\web\hospi\application\cache\dynamic\D_\web\hospi\application\views\admin\pra.htm\ebf0e760c8938f21581740567c6d4c73 */?>
-<?php echo $TPL_VAR["str_text2"]?>
