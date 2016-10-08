@@ -1,0 +1,2 @@
+<?php /* Template_ 2.2.3 2016/07/29 14:18:05 /home/hosting_users/hospi/www/application/cache/dynamic/application/views/board/skin/board/write.htm/f92dcfb1996f08342e1d6937126317cc */?>
+<?php echo $TPL_VAR["str_text"]?>

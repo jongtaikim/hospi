@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ec13de47-c984-4a22-9c59-d97a77e4bf36" name="하스피" url="http://hospi.co.kr">
+        <fileTransfer host="hospi.co.kr" port="22" rootFolder="/home/hosting_users/hospi/www/" accessType="SFTP" password="dfcddfc1dfdedfc7dfdcdfc6df92df99df92df9cdf8b" username="hospi">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

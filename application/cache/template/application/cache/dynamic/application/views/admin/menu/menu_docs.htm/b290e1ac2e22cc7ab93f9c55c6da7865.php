@@ -1,0 +1,2 @@
+<?php /* Template_ 2.2.3 2016/07/28 16:50:20 /home/hosting_users/hospi/www/application/cache/dynamic/application/views/admin/menu/menu_docs.htm/b290e1ac2e22cc7ab93f9c55c6da7865 */?>
+<?php echo $TPL_VAR["contents"]?>
